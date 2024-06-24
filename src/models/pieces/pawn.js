@@ -17,9 +17,17 @@ export default class Pawn {
     if (this.player === Player.WHITE) {
       // white pawns can move "up" by one
       moves.push(new Square(location.row + 1, location.col))
+
+      if (location.row === 1) {
+        moves.push(new Square(location.row + 2, location.col))
+      }
     } else {
       // black pawns can move "down" by one
       moves.push(new Square(location.row - 1, location.col))
+
+      if (location.row === 6) {
+        moves.push(new Square(location.row - 2, location.col))
+      }
     }
 
     return moves
