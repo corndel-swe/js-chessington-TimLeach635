@@ -58,10 +58,6 @@ describe('Queen', () => {
       new Square(5, 0)
     ]
 
-    for (let expectedMove of expectedMoves) {
-      assert(moves.some(square => square.equals(expectedMove)))
-    }
-
     assert(expectedMoves.every(expectedSquare => moves.some(square => square.equals(expectedSquare))))
   })
 })
